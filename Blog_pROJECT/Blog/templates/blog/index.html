@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom styles for the cover page */
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            background-color: #ADD8E6; /* Light blue background */
+        }
+
+        .cover-container {
+            flex: 1; /* Make the container take up available space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .cover-heading {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #333; /* Darker heading color */
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #555; /* Slightly darker text color */
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cover-container">
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Blog Posts</h1>
+            <p class="lead">
+                Welcome to our blog! Discover insightful articles and engaging stories on a variety of topics.
+            </p>
+            <p class="lead">
+                <a href="{% url 'post_list' %}" class="btn btn-lg btn-primary">Explore Posts</a>
+                <a href="{% url 'post_create' %}" class="btn btn-lg btn-secondary">Create New Post</a>
+            </p>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
